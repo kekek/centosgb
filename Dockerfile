@@ -27,4 +27,4 @@ VOLUME ["/project"]
 
 WORKDIR /project/
 
-CMD ["./build.sh"]
+ENTRYPOINT  ["./build.sh"]
