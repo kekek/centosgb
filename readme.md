@@ -4,12 +4,24 @@
 
 本Dockerfile是生成一个gb管理工具，来管理旧项目包
 
-##  run 
+##  build 项目文件
 
-默认的entrypoint 是build.sh, 如若要使用gb命令的话，可以自行添加 gb 相关的entrypoint
+默认的entrypoint 是$(pwd)/build.sh, 如若要使用gb命令的话，可以自行添加 gb 相关的entrypoint
 
 ```bash 
-docker run --rm -it --entrypoint=gb.sh -v $(pwd):/project kekek/centosgb:v1
+docker run --rm -it -v $(pwd):/project kekek/centosgb:v1
+```
+
+## gb example
+
+```bash
+docker run -v $(pwd):/project --rm  --entrypoint=gb kekek/centosgb:v1 info
+```
+
+## build docker image
+
+```bash 
+make -e TAG={tag-name} build
 ```
 
 ## 备份 
