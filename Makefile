@@ -1,5 +1,5 @@
 
-TAG=v1
+TAG=gb-http
 
 .PHONY: build 
 build:
