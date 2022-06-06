@@ -23,7 +23,7 @@ RUN  yum -y install git
 RUN go get github.com/constabulary/gb/... && \
         go install github.com/constabulary/gb
 
-RUN cp ./request.go  /usr/local/go/src/net/http/request.go
+COPY ./request.go  /usr/local/go/src/net/http/request.go
 
 VOLUME ["/project"]
 
