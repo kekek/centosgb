@@ -22,5 +22,5 @@ endef
 define build-images
 	@echo ">> build-images exec: "
 	@echo ">> docker build -t kekek/centosgb:$(strip $(1)) ."
-	docker build -t kekek/centosgb:$(strip $(1)) .
+	docker build --platform linux/amd64 -t kekek/centosgb:$(strip $(1)) .
 endef
